@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('miprimerlayout', function () {
+    return view('miprimerlayout');
+});
+
+Route::get('vista', function () {
+    return View::make ('vista'); 
+});
