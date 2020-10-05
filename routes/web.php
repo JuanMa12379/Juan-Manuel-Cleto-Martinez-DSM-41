@@ -22,3 +22,5 @@ Route::get('miprimerlayout', function () {
 Route::get('vista', function () {
     return View::make ('vista'); 
 });
+
+Route::resource('alumno', 'alumnocontroler');
