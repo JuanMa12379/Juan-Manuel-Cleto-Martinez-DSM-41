@@ -51,6 +51,10 @@ class materiascontroller extends Controller
     public function show($id)
     {
         //
+        $materias = materias::find($id);
+
+        return $materias;
+
     }
 
     /**
