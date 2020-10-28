@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -23,4 +23,13 @@ Route::get('vista', function () {
     return View::make ('vista'); 
 });
 
-Route::resource('alumno', 'alumnocontroler');
+*/
+// Route::resource('getalumnos', 'alumnocontroler');
+
+Route::group(['prefix'=> 'api'], function(){
+    Route::apiResource('materias', 'materiascontroller');
+    Route::apiResource('alumnos', 'alumnocontroler@store');
+
+});
+
+

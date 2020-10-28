@@ -3,25 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\alumno;
+use App\materias;
 
-
-
-class alumnocontroler extends Controller
+class materiascontroller extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function index()
     {
-
-        $alumnos = alumnos::all();
-        return response()->json(['alumnos'=>$alumnos]);
- 
+        //
+        $materias = materias::all();
+        return response()->json(['materias'=> $materias] );
     }
 
     /**
@@ -31,12 +26,7 @@ class alumnocontroler extends Controller
      */
     public function create()
     {
-        $alum = new alum;
-        $alum-> nombre= 'juan manuel';
-        $alum-> apellido= 'cleto';
-        $alum-> email= 'al221811704@gmail.com';
-        $alum-> save ();
-        return 'datos guardados';
+        //
     }
 
     /**
@@ -48,6 +38,8 @@ class alumnocontroler extends Controller
     public function store(Request $request)
     {
         //
+        $materia = Create::all($request);
+        return ('el registro materia a sido guardado correctamente');
     }
 
     /**
